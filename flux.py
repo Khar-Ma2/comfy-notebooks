@@ -20,6 +20,9 @@ from comfy_script.runtime.nodes import *
 load("http://127.0.0.1:8188/")
 # load("/workspace/ComfyUI/")
 
+# Disable automatic progress and node preview display in IPython cell output
+queue.watch_display(False)
+
 # Import our custom modules
 from jupyter_data_types import GroupsConfig, GenItem
 from jupyter_utils import work_with, save_img

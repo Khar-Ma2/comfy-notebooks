@@ -70,7 +70,7 @@ async def flux1_img_gen(
         sigmas = BasicScheduler(model_sampling, scheduler, steps, denoise)
 
         # Latent and Generation
-        latent = EmptyFlux2LatentImage(latent_width, latent_height, batch_size)
+        latent = EmptyLatentImage(latent_width, latent_height, batch_size)
         latent, _ = SamplerCustomAdvanced(noise_node, guider, sampler, sigmas, latent)
 
         # VAE Decode
